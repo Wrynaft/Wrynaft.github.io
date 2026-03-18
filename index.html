@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Chin — Data Science Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of Ryan Chin — Data Science student at Universiti Malaya. Machine learning, data engineering, full-stack projects." />
+
+  <!-- Favicons (emoji fallback) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Phosphor Icons (lightweight icon set) -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" />
+</head>
+
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo gradient-text">RC</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-glow cyan"></div>
+    <div class="hero-glow purple"></div>
+
+    <div class="container">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name gradient-text">Ryan Chin</h1>
+        <p class="hero-tagline">
+          <span id="typed-text"></span><span class="cursor"></span>
+        </p>
+        <div class="hero-socials">
+          <a href="httpshttps://github.com/Wrynaft" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="ph ph-github-logo"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ryanchinjh/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="mailto:ryanchinjh@gmail.com" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-ring">
+          <div class="photo-inner">
+            <img src="profile.jpg" alt="Ryan Chin" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">About Me</span></h2>
+      <p class="section-subtitle reveal">A snapshot of who I am and what drives me.</p>
+
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <p>
+            I'm a <strong>Year 3 Bachelor of Computer Science (Data Science)</strong> student at
+            <strong>Universiti Malaya</strong>, experienced in end-to-end data lifecycles. From <strong>engineering
+              robust data pipelines</strong>
+            to deploying <strong>advanced predictive models</strong> and <strong>generative AI systems</strong>, I am
+            passionate about transforming complex, unstructured data into actionable business intelligence.
+            My focus is on delivering scalable, data-driven solutions that solve real-world problems, such as through
+            award-winning <strong>interactive dashboards</strong> or <strong>LLM-based multi-agent platforms</strong>
+            for financial analysis.
+          </p>
+        </div>
+
+        <div class="about-details reveal">
+          <div class="about-detail-card glass-card">
+            <h4>Education</h4>
+            <p>BCS (Data Science) — Universiti Malaya</p>
+          </div>
+          <div class="about-detail-card glass-card">
+            <h4>Languages</h4>
+            <p>English · Malay · Mandarin</p>
+          </div>
+          <div class="about-detail-card glass-card">
+            <h4>Interests</h4>
+            <p>ML · Data Engineering · LLM Agents · Analytics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Experience</span></h2>
+      <p class="section-subtitle reveal">Where I've contributed and grown.</p>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <span class="timeline-date">2025</span>
+          <h3>Teaching Assistant</h3>
+          <p class="timeline-org">Universiti Malaya — Faculty of Computer Science &amp; IT</p>
+          <p>Assist lecturers in conducting tutorials and lab sessions. Support students in programming fundamentals,
+            data structures, and introductory data science courses.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">2024</span>
+          <h3>Teaching Assistant</h3>
+          <p class="timeline-org">Universiti Malaya — Faculty of Computer Science &amp; IT</p>
+          <p>Guided peers through hands-on exercises in database management and statistics for data science. Helped
+            troubleshoot code and clarify concepts during lab hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle reveal">Things I've built and experimented with.</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🤖</span>
+          <h3><a href="https://github.com/Wrynaft/RoundtableAI" target="_blank" class="gradient-text">RoundtableAI:
+              LLM-Based Multi-Agent System</a></h3>
+          <p>An intelligent stock analysis and portfolio management system for the Bursa Malaysia market. Employs a
+            Multi-Agent System (MAS) and LLMs to synthesize fragmented data and provide transparent investment
+            recommendations.</p>
+          <div class="project-tags">
+            <span>Gemini</span>
+            <span>LangChain</span>
+            <span>Streamlit</span>
+            <span>MongoDB</span>
+            <span>FinBERT</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">📱</span>
+          <h3><a href="https://github.com/Wrynaft/Tweet-Normalizer" target="_blank" class="gradient-text">Malaysian
+              Tweet Normalizer</a></h3>
+          <p>An NLP project that normalizes noisy, informal Malaysian tweets (containing slang, abbreviations, and
+            misspellings) into standard, formal text in both English and Malay.</p>
+          <div class="project-tags">
+            <span>PyTorch</span>
+            <span>HuggingFace</span>
+            <span>Gradio</span>
+            <span>FastText</span>
+            <span>NLTK</span>
+            <span>Pandas</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">💰</span>
+          <h3><a href="https://github.com/Wrynaft/FinancialDataMining" target="_blank" class="gradient-text">AI-Enhanced
+              Financial Analytics</a></h3>
+          <p>Encompasses dataset simulation, feature engineering, predictive modelling, and model interpretation in the
+            financial domain using traditional ML alongside GenAI and Small Language Models (SLMs).</p>
+          <div class="project-tags">
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Gemini</span>
+            <span>Mistral</span>
+            <span>BART</span>
+            <span>scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🌧️</span>
+          <h3><a href="https://github.com/Wrynaft/WeatherPrediction" target="_blank" class="gradient-text">KL Weather
+              Prediction</a></h3>
+          <p>Analyzes historical weather data and forecasts rainfall patterns for Kuala Lumpur. Includes data retrieval,
+            cleaning, EDA, feature engineering, and the evaluation of five ML regression models.</p>
+          <div class="project-tags">
+            <span>Streamlit</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>scikit-learn</span>
+            <span>Joblib</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">📉</span>
+          <h3><a href="https://colab.research.google.com/drive/19hftcE8RPMA4mWT7ayhcI64Zu9vcene8?usp=sharing"
+              target="_blank" class="gradient-text">Bankruptcy Prediction</a></h3>
+          <p>A machine learning project predicting company bankruptcy. Developed and evaluated models (XGBoost, Ridge
+            Regression, Random Forest) with data cleaning, feature engineering, and hyperparameter tuning to address
+            imbalanced classes.</p>
+          <div class="project-tags">
+            <span>scikit-learn</span>
+            <span>auto-sklearn</span>
+            <span>Pandas</span>
+            <span>Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🚌</span>
+          <h3><a
+              href="https://app.powerbi.com/view?r=eyJrIjoiY2EyYjg2MWUtNzYwZC00ZTBiLTllNzYtOTU1MWU2YTZlMGI1IiwidCI6ImE2M2JiMWE5LTQ4YzItNDQ4Yi04NjkzLTMzMTdiMDBjYTdmYiIsImMiOjEwfQ%3D%3D&pageName=e18069fdd3acb091f3b2"
+              target="_blank" class="gradient-text">Klang Valley Public Transport Ridership</a></h3>
+          <p>An analysis of public transport figures in Klang Valley for prescriptive recommendations, featuring deep
+            EDA, data modelling, and interactive dashboarding.</p>
+          <div class="project-tags">
+            <span>PowerBI</span>
+            <span>Pandas</span>
+            <span>scikit-learn</span>
+            <span>Seaborn</span>
+            <span>Matplotlib</span>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🚨</span>
+          <h3><a href="https://public.tableau.com/shared/5YSC4DNFD?:display_count=n&:origin=viz_share_link"
+              target="_blank" class="gradient-text">Crime & Community</a></h3>
+          <p>A data visualization project that merges multiple datasets to investigate crime statistics and their
+            relationships with other socioeconomic factors.</p>
+          <div class="project-tags">
+            <span>Tableau</span>
+            <span>SAS Viya</span>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🗄️</span>
+          <h3><a href="https://github.com/Wrynaft/Hadoop-Spark-Comparison" target="_blank" class="gradient-text">Hadoop
+              vs Spark Performance Comparison</a></h3>
+          <p>Compares the performance of Apache Hadoop (MapReduce) and Apache Spark by implementing and benchmarking
+            three queries on the same dataset to evaluate how these frameworks handle identical workloads.</p>
+          <div class="project-tags">
+            <span>Apache Hadoop (Java)</span>
+            <span>Apache Spark (Scala)</span>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🏀</span>
+          <h3><a href="https://github.com/Wrynaft/spursmanager" target="_blank" class="gradient-text">NBA General
+              Manager Application</a></h3>
+          <p>A web-based management platform for roster management, city-to-city travel optimization, and player
+            tracking. Heavily utilizes data structures and algorithms such as graphs, Depth-First Search (DFS), stacks,
+            and queues.</p>
+          <div class="project-tags">
+            <span>Angular</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+            <span>Java</span>
+            <span>NBA API</span>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">🪴</span>
+          <h3><a href="https://github.com/Naturum/naturum" target="_blank" class="gradient-text">Naturum</a></h3>
+          <p>A desktop nature conservation awareness application featuring user accounts, a quiz system, daily logins, a
+            point shop, and live news retrieval via API.</p>
+          <div class="project-tags">
+            <span>Java</span>
+            <span>JavaFX</span>
+            <span>MySQL</span>
+            <span>Apache Ant</span>
+            <span>News API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Skills</span></h2>
+      <p class="section-subtitle reveal">Technologies and tools I work with.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group glass-card reveal">
+          <h3><span class="icon">💻</span> Programming</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Scala</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <h3><span class="icon">🧠</span> AI &amp; Data Science</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">HuggingFace</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">Gemini</span>
+            <span class="skill-tag">NLTK</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <h3><span class="icon">⚙️</span> Frameworks &amp; Tools</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Gradio</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Apache Hadoop</span>
+            <span class="skill-tag">JavaFX</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <h3><span class="icon">🗄️</span> Databases</h3>
+          <div class="skill-list">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section id="awards">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Awards</span></h2>
+      <p class="section-subtitle reveal">Recognitions I'm proud of.</p>
+
+      <div class="awards-grid">
+        <div class="award-card glass-card reveal">
+          <span class="award-icon">🏆</span>
+          <div>
+            <h3>UKM Data Challenge 4.0 - Best Interactive Dashboard</h3>
+            <p>Competed in a national-level data science competition, tackling real-world analytics problems with
+              creative data-driven solutions, including a best interactive dashboard built with PowerBI</p>
+          </div>
+        </div>
+
+        <div class="award-card glass-card reveal">
+          <span class="award-icon">🥇</span>
+          <div>
+            <h3>Data Challenge 3.0 - Consolation Prize</h3>
+            <p>Demonstrated strong analytical and presentation skills in a multi-round data challenge event.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Certifications</span></h2>
+      <p class="section-subtitle reveal">Industry credentials I've earned.</p>
+
+      <div class="certs-grid">
+        <div class="cert-card glass-card reveal">
+          <span class="cert-icon">☁️</span>
+          <div>
+            <h3>AWS Academy Cloud Foundations</h3>
+            <p>Core cloud computing concepts, AWS global infrastructure, pricing, security, and key services.</p>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card reveal">
+          <span class="cert-icon">📈</span>
+          <div>
+            <h3>Google Cloud Data Analytics</h3>
+            <p>Data analytics fundamentals using Google Cloud tools — BigQuery, Looker, and data pipeline best
+              practices.</p>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card reveal">
+          <span class="cert-icon">📊</span>
+          <div>
+            <h3>Google Advanced Data Analytics Professional Certificate</h3>
+            <p>Advanced analytics techniques, including statistical analysis, machine learning, and data
+              visualization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="gradient-text">Get In Touch</span></h2>
+      <p class="section-subtitle reveal">Feel free to reach out — I'd love to connect!</p>
+
+      <div class="contact-grid">
+        <a href="mailto:ryanchinjh@gmail.com" class="contact-card glass-card reveal">
+          <span class="contact-icon"><i class="ph ph-envelope-simple"></i></span>
+          <div>
+            <h4>Email</h4>
+            <p>ryanchinjh@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ryanchinjh/" target="_blank" rel="noopener"
+          class="contact-card glass-card reveal">
+          <span class="contact-icon"><i class="ph ph-linkedin-logo"></i></span>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/ryanchinjh</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Wrynaft" target="_blank" rel="noopener" class="contact-card glass-card reveal">
+          <span class="contact-icon"><i class="ph ph-github-logo"></i></span>
+          <div>
+            <h4>GitHub</h4>
+            <p>github.com/Wrynaft</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ryan Chin. Built with ☕ and curiosity.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
