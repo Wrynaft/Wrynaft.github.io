@@ -238,6 +238,31 @@ section { padding: var(--section-py) 0; }
 
 @keyframes blink { 50% { opacity: 0; } }
 
+/* resume button */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .65rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: .95rem;
+  font-weight: 600;
+  background: var(--gradient-main);
+  color: var(--bg-primary);
+  transition: transform .3s var(--ease-out), box-shadow .3s;
+  margin-bottom: .75rem;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(34, 211, 238, .25);
+}
+
+.resume-btn i {
+  font-size: 1.15rem;
+}
+
 .hero-socials {
   display: flex;
   gap: 1rem;
@@ -647,6 +672,7 @@ footer {
     text-align: center;
   }
 
+  .resume-btn { align-self: center; }
   .hero-socials { justify-content: center; }
 
   .hero-photo { width: 200px; height: 200px; }

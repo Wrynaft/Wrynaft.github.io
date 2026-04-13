@@ -8,9 +8,28 @@
   <meta name="description"
     content="Personal portfolio of Ryan Chin — Data Science student at Universiti Malaya. Machine learning, data engineering, full-stack projects." />
 
+  <!-- Open Graph — link previews on LinkedIn, Discord, Slack, etc. -->
+  <meta property="og:title" content="Ryan Chin — Data Science & Engineering Portfolio" />
+  <meta property="og:description" content="Data Science student at Universiti Malaya. Machine learning, data engineering, and full-stack projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wrynaft.github.io/" />
+  <meta property="og:image" content="banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ryan Chin — Data Science & Engineering Portfolio" />
+  <meta name="twitter:description" content="Data Science student at Universiti Malaya. Machine learning, data engineering, and full-stack projects." />
+  <meta name="twitter:image" content="https://wrynaft.github.io/profile.jpg" />
+
   <!-- Favicons (emoji fallback) -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- Analytics — Umami (privacy-respecting, no cookies, GDPR-compliant) -->
+  <!-- Sign up at https://cloud.umami.is, add your site, and replace the data-website-id below -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="a6e41712-7d55-454d-ae70-bf06a5396881"></script>pt>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
@@ -54,8 +73,11 @@
         <p class="hero-tagline">
           <span id="typed-text"></span><span class="cursor"></span>
         </p>
+        <a href="resume.pdf" target="_blank" class="resume-btn">
+          <i class="ph ph-file-pdf"></i> Resume
+        </a>
         <div class="hero-socials">
-          <a href="httpshttps://github.com/Wrynaft" target="_blank" rel="noopener" aria-label="GitHub">
+          <a href="https://github.com/Wrynaft" target="_blank" rel="noopener" aria-label="GitHub">
             <i class="ph ph-github-logo"></i>
           </a>
           <a href="https://www.linkedin.com/in/ryanchinjh/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -101,6 +123,7 @@
           <div class="about-detail-card glass-card">
             <h4>Education</h4>
             <p>BCS (Data Science) — Universiti Malaya</p>
+            <p>Japan Studies Program (Exchange Program) — Ryukoku University, Kyoto</p>
           </div>
           <div class="about-detail-card glass-card">
             <h4>Languages</h4>
@@ -128,6 +151,15 @@
           <p class="timeline-org">Universiti Malaya — Faculty of Computer Science &amp; IT</p>
           <p>Assist lecturers in conducting tutorials and lab sessions. Support students in programming fundamentals,
             data structures, and introductory data science courses.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">2024 – 2025</span>
+          <h3>Head of Contest Protocol Department</h3>
+          <p class="timeline-org">PEKOM — UM Game Jam 2024</p>
+          <p>Led the contest protocol department for a university-wide game jam. Developed contest rules, themes, and
+            challenges to ensure fair competition. Managed department members through collaborative decision-making and
+            task delegation.</p>
         </div>
 
         <div class="timeline-item">
@@ -164,6 +196,25 @@
             <span>MongoDB</span>
             <span>FinBERT</span>
             <span>Python</span>
+          </div>
+        </div>
+
+        <!-- Project: Crypto Market Tracker -->
+        <div class="project-card glass-card reveal">
+          <span class="project-icon">📈</span>
+          <h3><a href="https://github.com/Wrynaft/Cryptocurrency-Tracker" target="_blank"
+              class="gradient-text">Real-Time Crypto Market Tracker</a></h3>
+          <p>A real-time data pipeline ingesting live cryptocurrency trades from Binance's WebSocket API through
+            Apache Kafka, bulk-loading into date-partitioned PostgreSQL via the COPY protocol, transforming into
+            OHLCV candlestick aggregations with incremental dbt models, and visualizing in Apache Superset
+            dashboards.</p>
+          <div class="project-tags">
+            <span>Apache Kafka</span>
+            <span>PostgreSQL</span>
+            <span>dbt</span>
+            <span>Apache Superset</span>
+            <span>Python</span>
+            <span>Docker</span>
           </div>
         </div>
 
@@ -346,6 +397,18 @@
         </div>
 
         <div class="skill-group glass-card reveal">
+          <h3><span class="icon">🔧</span> Data Engineering</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Apache Kafka</span>
+            <span class="skill-tag">dbt</span>
+            <span class="skill-tag">Apache Superset</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Apache Hadoop</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card reveal">
           <h3><span class="icon">⚙️</span> Frameworks &amp; Tools</h3>
           <div class="skill-list">
             <span class="skill-tag">Streamlit</span>
@@ -354,8 +417,6 @@
             <span class="skill-tag">Angular</span>
             <span class="skill-tag">Power BI</span>
             <span class="skill-tag">Tableau</span>
-            <span class="skill-tag">Apache Spark</span>
-            <span class="skill-tag">Apache Hadoop</span>
             <span class="skill-tag">JavaFX</span>
           </div>
         </div>
@@ -363,8 +424,10 @@
         <div class="skill-group glass-card reveal">
           <h3><span class="icon">🗄️</span> Databases</h3>
           <div class="skill-list">
+            <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">MongoDB</span>
             <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Redis</span>
           </div>
         </div>
 
